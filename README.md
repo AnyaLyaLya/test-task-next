@@ -7,3 +7,9 @@ Welcome to the Mbunity Development Next.js Front-End Technical Assessment! This 
 - Next.js 13+
 - GitHub
 - Vercel
+- HTML
+- SASS
+- BEM
+- React
+- React hooks
+- JSX
