@@ -1,0 +1,48 @@
+@mixin text(
+  $font-family,
+  $font-size, 
+  $line-height, 
+  $color, 
+  $font-weight: 400,
+) {
+  font-style: normal;
+  font-family: $font-family, sans-serif;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin size(
+  $width,
+  $height, 
+) {
+  width: $width;
+  height: $height;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+@mixin onMobile {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onLaptop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}

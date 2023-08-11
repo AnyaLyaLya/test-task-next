@@ -1,0 +1,97 @@
+@import '../styles/_mixins';
+@import '../styles/_vars';
+@import '../styles/_fonts';
+
+body {
+  background-color: $background-color;
+  margin: 0;
+}
+
+.contact {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  background-color: $background-color;
+  padding: 0 20px;
+
+  &__title {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 80px;
+
+    @include text('Poppins', 40px, normal, $primary-color, 700);
+
+    @include onMobile {
+      font-size: 24px;
+      margin-top: 44px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 50px;
+
+    @include text('Poppins', 18px, normal, #717171, 500);
+
+    @include onMobile {
+      font-size: 14px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background: $white;
+    box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.03);
+    padding: 10px;
+    width: 100%;
+
+    @include onMobile {
+     flex-direction: column;
+     padding: 5px;
+    }
+  }
+}
+
+.custom-radios {
+  
+  div {
+    display: inline-block;
+  }
+
+  input[type="radio"] {
+    display: none;
+
+    + label {
+      color: #333;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+
+      span {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin: -1px 4px 0 0;
+        vertical-align: middle;
+        cursor: pointer;
+        border-radius: 50%;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        line-height: 44px;
+    
+        .img {
+          opacity: 0;
+          transition: all .3s ease;
+        }
+      }
+    }
+
+    &#color-1 + label span {
+      background-color: $secondary-color;
+    }
+  }
+}

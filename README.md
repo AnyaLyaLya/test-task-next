@@ -1,3 +1,16 @@
+# Mbunity Next.js Front-End Technical Assessment
+
+Welcome to the Mbunity Development Next.js Front-End Technical Assessment! This assessment is designed to evaluate my skills in Next.js, Figma, and front-end development. 
+
+## Technologies Used
+
+- Next.js 13+
+- GitHub
+- Vercel
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

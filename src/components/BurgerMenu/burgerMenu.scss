@@ -1,0 +1,80 @@
+@import '../../styles/_mixins';
+@import '../../styles/_vars';
+
+.burger-menu {
+  background-color: $primary-color;
+  width: 100%;
+  padding: 30px 20px;
+  z-index: 100;
+  height: 100vh;
+
+  display: none;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 58px;
+  }
+
+  &__logo {
+    @include text('Inter', 18px, normal, $white, 800);
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  &__navigation {
+    margin-bottom: 60px;
+  }
+
+  &__item {
+    display: block;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    margin-left: 4px;
+    
+    width: fit-content;
+    padding-right: 4px;
+
+    @include text('Roboto', 14px, normal, $white, 400);
+
+    &--active {
+      border-bottom: 2px solid $white;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 36px;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include size(32px, 32px);
+
+    border: 1px solid $white;
+  }
+
+  @include onMobile {
+    display: block;
+
+    transition: all 0.3 ease-in;
+  }
+}

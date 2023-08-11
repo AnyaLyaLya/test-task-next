@@ -1,0 +1,100 @@
+@import '../../styles/_mixins';
+@import '../../styles/_vars';
+@import '../../styles/_fonts';
+
+.header {
+  padding: 40px 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background-color;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1;
+
+  @include onLaptop {
+    padding: 20px 20px 0;    
+  }
+  
+  @include onMobile{
+    padding: 30px 20px 0;    
+  }
+
+  &__logo {
+    @include text('Inter', 24px, 24px, $primary-color, 800);
+
+    @include onTablet{
+      font-size: 20px;   
+    }
+
+    @include onMobile{
+      font-size: 18px;   
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+    &--item {
+      list-style: none;
+
+      @include text('Roboto', 16px, 24px, $secondary-color, 400);
+
+      &--active {
+        color: $primary-color;
+        font-weight: 600;
+      }
+
+      &--link {
+        color: $primary-color;
+        transition: all 0.3s es;
+
+        &:hover {
+          color: $border-color;
+        }
+      }
+
+      @include onTablet{
+        font-size: 14px;   
+      }
+    }
+
+    &--icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include size(32px, 32px);
+
+      @include onTablet {
+        @include size(26px, 26px);
+      }
+    }
+
+    @include onLaptop {
+      gap: 36px;
+    }
+
+    @include onTablet {
+      gap: 20px;
+    }
+
+    @include onMobile {
+      display: none;
+    }
+  }
+
+  &__burger-icon {
+    display: none;
+
+    @include onMobile {
+      display: flex;
+    }
+  }
+}

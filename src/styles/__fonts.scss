@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:wght@500&family=Roboto&display=swap');
+
+$Poppins: 'Poppins', sans-serif;
+$Roboto: 'Roboto', sans-serif;
+$Inter: 'Inter', sans-serif;
+
+@font-face {
+  font-family: $Poppins;
+  font-style: normal;
+  font-weight: 500; 
+  src: local($Poppins)
+}
+
+@font-face {
+  font-family: $Roboto;
+  font-style: normal;
+  font-weight: 500; 
+  src: local($Roboto)
+}
+
+@font-face {
+  font-family: $Inter;
+  font-style: normal;
+  font-weight: 500; 
+  src: local($Inter)
+}

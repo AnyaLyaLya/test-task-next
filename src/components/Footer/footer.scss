@@ -1,0 +1,226 @@
+@import '../../styles/_mixins';
+@import '../../styles/_vars';
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer {
+  padding: 80px;
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include onMobile {
+    padding: 20px;
+  }
+
+  @include onTablet {
+    padding: 40px 20px;
+  }
+
+  @include onLaptop {
+    padding: 80px 20px;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+
+    @include text('Inter', 36px, normal, $white, 800);
+
+    @include onTablet {
+      font-size: 28px;
+    }
+
+    @include onLaptop {
+      font-size: 32px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+
+    @include text('Poppins', 18px, 26px, $white, 600);
+
+    @include onTablet {
+      font-size: 14px;
+    }
+
+    @include onLaptop {
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    @include text('Poppins', 16px, normal, $white);
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    @include onTablet {
+      font-size: 12px;
+    }
+
+    @include onLaptop {
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    opacity: 0.5;
+
+    @include text('Manrope', 14px, normal, $white, 500);
+
+    @include onTablet {
+      font-size: 10px;
+    }
+
+    @include onLaptop {
+      font-size: 12px;
+    }
+  }
+
+  &__icon {
+    margin-right: 24px;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    gap: 60px;
+    padding: 30px 0 0 20px;
+
+    border-top: 1px solid $white;
+
+    &--lists {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    
+    @include onMobile {
+      padding: 30px 0 0 0;
+    }
+
+    @include onTablet {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    @include onLaptop {
+      gap: 30px;
+    }
+  }
+
+  &__list {
+    &--item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__subscribe-block {
+    background-color: $dark-grey;
+    border-radius: 10px;
+    padding: 14px;
+
+    &--subtitle {
+      margin-bottom: 30px;
+
+      @include text('Poppins', 18px, 26px, $white, 600);
+
+      @include onTablet {
+        font-size: 14px;
+      }
+  
+      @include onLaptop {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+    height: 40px;
+    display: flex;
+
+    margin-bottom: 20px;
+
+    &--input {
+      padding: 12px 10px;
+      background-color: $light-grey;
+      border-radius: 4px 0 0 4px;
+      width: 70%;
+      transition: all 0.3s ease-in-out;
+      border: 1px solid transparent;
+
+      &::placeholder {
+        @include text('Poppins', 12px, normal, #616161);
+
+        @include onTablet {
+          font-size: 8px;
+        }
+    
+        @include onLaptop {
+          font-size: 10px;
+        }
+      }
+
+      &:hover {
+        background-color: $background-color;
+      }
+
+      &:focus {
+        outline: none;
+        background-color: $background-color;
+      }
+
+      @include text('Poppins', 12px, normal, #616161);
+
+      @include onTablet {
+        font-size: 8px;
+      }
+  
+      @include onLaptop {
+        font-size: 10px;
+      }
+    }
+
+    &--button {
+      background-color: $primary-color;
+      border-radius: 0 4px 4px 0;
+      min-width: 30%;
+      text-align: center;
+      border: 1px solid transparent;
+
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $primary-color;
+        background-color: $background-color;
+        border-color: $primary-color;
+      } 
+
+      @include text('Poppins', 12px, normal, $white, 500);
+
+      @include onTablet {
+        font-size: 8px;
+      }
+  
+      @include onLaptop {
+        font-size: 10px;
+      }
+    }
+  }
+}
